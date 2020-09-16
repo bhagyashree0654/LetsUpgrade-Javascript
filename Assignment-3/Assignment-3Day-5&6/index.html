@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <style>
+    *{
+    margin: 5px;
+    padding:5px;
+}
+body{
+    background-color:#920de9;
+}
+table{
+    background-color: antiquewhite;
+    position:relative;
+    width: 100%;
+    margin-top: 20px;
+}
+h1,form,.form{
+    text-align: center;
+    color: mintcream;
+}
+th,td{
+    width: 10%;
+    padding: 2px;
+    margin: auto;
+    text-align: center;
+
+}
+input{
+    height: 10%;
+    color: darkmagenta;
+    border-radius: 10px;
+}
+#deleteEmp{
+    background-color: red;
+    width: auto;
+}
+button{
+    background-color: green;
+    border-radius: 5px;
+    width: 10%;
+    color: whitesmoke;
+}
+   </style>
+</head>
+<body>
+    <div>
+        <h1>Annonymous Software</h1>
+        <form onsubmit="addEmployee(event)">
+            <input type="text" placeholder="Name" id="name">
+            <input type="number" placeholder="Age" id="age">
+            <input type="text" placeholder="City" id="city">
+            <input type="number" placeholder="Salary" id="salary"><br>
+            <button type="submit">Add Employee &#x1F477;</button>
+        </form>
+    </div>
+    <div class="form">
+            <input type="text" placeholder="Type to search &#x1f50d;" id="searchNameAndCity" onkeyup="searchByNameAndCity()" />
+    </div>
+
+    <div>
+        <table  border="1" cellspacing="0" id="myTable">
+            <h1>Employee Details</h1>
+            <thead><tr>
+                <th>Sr. No</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Salary</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody class="tbldata">
+            </tbody>
+        </table>
+    </div>
+   
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
